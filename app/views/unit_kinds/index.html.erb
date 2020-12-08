@@ -1,0 +1,16 @@
+<div>
+  <p> Классы единиц      <span class="btn btn-outline-primary" href="#"><%= link_to "Добавить", new_unit_kind_path %></span>
+  </p>
+</div>
+<table>
+  <tr>
+    <th width="50%">Название</th>
+    <th width="20%">Можно конвертировать</th>
+  </tr>
+  <% @unit_kinds.order(:name).each do |unit_kind| %>
+    <tr>
+      <td><%= link_to unit_kind.name, unit_kind_path(unit_kind) %></td>
+      <td> <%= unit_kind.is_can_convert %> </td>
+    </tr>
+  <% end %>
+</table>
