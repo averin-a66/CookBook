@@ -1,0 +1,7 @@
+<h3>Изменить систему единиц</h3>
+<%= form_for( :unit_system, url: unit_system_path(@unit_system), method: :patch) do |f| %>
+  <% @form=f %>
+  <%= render 'en' %>
+
+  <p>  <%= f.submit('Запомнить', {:class => 'btn btn-warning'}) %> </p>
+<% end %>

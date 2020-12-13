@@ -1,0 +1,10 @@
+<h3>Добавить класс единиц</h3>
+<%= form_for( :unit_kind, url: unit_kinds_path) do |f| %>
+  <% @form = f %>
+  <%= render 'edit_new' %>
+
+
+  <p>  <%= f.submit('Запомнить', {:class => 'btn btn-outline-primary'}) %>
+    <%= link_to 'Отмена', unit_kinds_path, :class => 'btn btn-outline-primary'  %>
+  </p>
+<% end %>

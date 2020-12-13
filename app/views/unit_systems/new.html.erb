@@ -1,0 +1,7 @@
+<h3>Добавить новую систему едениц</h3>
+<%= form_for( :unit_system, url: unit_systems_path) do |f| %>
+  <% @form=f %>
+  <%= render 'en' %>
+
+  <p>  <%= f.submit('Запомнить', {:class => 'btn btn-warning'}) %> </p>
+<% end %>

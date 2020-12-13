@@ -17,7 +17,12 @@
       <span class="p-2 text-dark" href="#"><%= link_to "Главная страница", home_path %></span>
 
     </nav>
-    <a class="btn btn-outline-primary" href="#">Войти</a>
+      <% if user_signed_in? %>
+        <span>Здравствуйте, <%= current_user.name %></span>
+        <%= link_to 'Выйти', destroy_user_session_path, :method => :delete %>
+      <% else %>
+        <%= link_to 'Войти', new_user_session_path %>   или   <%= link_to 'Зарегистрироваться', new_user_registration_path %>
+      <% end %>
   </div>
     <div class="container">
       <%= yield %>

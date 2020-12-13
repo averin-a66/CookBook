@@ -1,0 +1,16 @@
+<% if @unit_convert.errors.any? %>
+  <% @unit_convert.errors.full_messages.each do |msg| %>
+    <div class="alert alert-danger"><%= msg %></div>
+  <% end %>
+<% end %>
+
+<p>Единица из
+  <% @hash = Unit.obj_to_hash('unit_kind_id<3') %>
+  <%= @f.collection_select(:unit_from_id, @hash, :first, :second, prompt: false) %>
+</p>
+<p>Единица в
+  <%= @f.collection_select(:unit_to_id,  @hash, :first, :second, prompt: false)%>
+</p>
+<p>Коефициент перевода<br>
+  <%= @f.number_field(:ratio, step: 0.0001) %>
+</p>

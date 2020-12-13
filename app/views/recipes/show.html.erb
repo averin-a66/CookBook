@@ -1,0 +1,40 @@
+<h4>Рецепт</h4>
+<h5><%= @recipe.name %></h5>
+<p><%= @recipe.body %></p>
+<br>
+<p>
+  <%= link_to 'Редактировать', edit_recipe_path(@recipe), :class=>'btn btn-warning' %>
+  <%= link_to 'Удалить', recipe_path(@recipe), method: :delete, data: {confirm: "Удалить?"}, :class=>'btn btn-danger' %>
+  <%= link_to 'Отмена', recipes_path, :class => 'btn btn-outline-primary'  %>
+</p>
+<h2>Ingredients</h2>
+<% @recipe.ingredients.each do |i| %>
+  <p>
+    <%= i.name %>
+     <%= i.quantity %>
+    <%= i.unit.name %>
+  </p>
+<% end %>
+<h2>Comments</h2>
+<% @recipe.coments.each do |comment| %>
+  <p>
+    <strong>User:</strong>
+    <%= comment.user.email %>
+  </p>
+
+  <p>
+    <strong>Comment:</strong>
+    <%= comment.body %>
+  </p>
+<% end %>
+<h2>Add a comment:</h2>
+<%= form_with model: [ @recipe, @recipe.coments.build ] do |form| %>
+  <%= form.hidden_field :user_id, :value=>current_user.id %>
+  <p>
+    <%= form.label :body %><br>
+    <%= form.text_area :body %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

@@ -1,0 +1,13 @@
+<% if @unit_system.errors.any? %>
+  <% @unit_system.errors.full_messages.each do |msg| %>
+    <div class="alert alert-danger"><%= msg %></div>
+  <% end %>
+<% end %>
+
+<p>Название системы едениц<br>
+  <%= @form.text_field(:title, {:class => 'form-control'} )%>
+</p>
+<p>
+  Описание<br>
+  <%= @form.text_area( :comment, {:class => 'form-control'} ) %>
+</p>

@@ -1,0 +1,14 @@
+<% if @state.errors.any? %>
+  <% @state.errors.full_messages.each do |msg| %>
+    <div class="alert alert-danger"><%= msg %></div>
+  <% end %>
+<% end %>
+
+<p>Название страны<br>
+  <%= @form.text_field(:name, {:class => 'form-control'} )%>
+</p>
+
+<p>
+  Система единиц<br>
+  <%= @form.collection_select(:unit_system_id,  UnitSystem.all.order(:title), :id, :title, prompt: true)%>
+</p>

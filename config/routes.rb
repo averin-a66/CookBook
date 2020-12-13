@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root 'states#index', as: 'home'
+  devise_for :users, controllers: { registrations: 'users/registrations' }
+  root 'recipes#index', as: 'home'
 
   get 'about' => 'pages#about'
 
@@ -8,5 +9,8 @@ Rails.application.routes.draw do
   resources :units
   resources :unit_kinds
   resources :unit_converts
-
+  resources :recipes do
+    resources :coments
+    resources :ingredients
+  end
 end

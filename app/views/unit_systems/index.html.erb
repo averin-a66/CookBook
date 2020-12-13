@@ -1,0 +1,8 @@
+<div>
+  <h3> Системы единиц </h3>
+  <span class="btn btn-outline-primary" href="#"><%= link_to "Добавить", new_unit_system_path %></span>
+</div>
+<% @unit_systems.each do |unit_system| %>
+  <span href="#"><%= link_to unit_system.title, unit_system_path(unit_system) %></span>
+  <p><%= unit_system.comment %></p>
+<% end %>

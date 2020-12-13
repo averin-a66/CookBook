@@ -1,0 +1,4 @@
+<h3><%= @unit_system.title %></h3>
+<p><%= @unit_system.comment %></p>
+<%= link_to 'Редактировать', edit_unit_system_path(@unit_system), :class=>'btn btn-warning' %>
+<%= link_to 'Удалить', unit_system_path(@unit_system), method: :delete, data: {confirm: "Удалить?"}, :class=>'btn btn-danger' %>

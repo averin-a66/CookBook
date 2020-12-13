@@ -1,0 +1,9 @@
+<h3>Добавить новую страну</h3>
+<%= form_for( :state, url: states_path) do |f| %>
+  <% @form = f %>
+  <%= render 'edit_new' %>
+
+  <p>  <%= f.submit('Запомнить', {:class => 'btn btn-outline-primary'}) %>
+       <%= link_to 'Отмена', states_path, :class => 'btn btn-outline-primary'  %>
+  </p>
+<% end %>

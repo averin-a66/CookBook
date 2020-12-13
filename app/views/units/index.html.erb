@@ -1,0 +1,20 @@
+<div>
+  <p> Единицы      <span class="btn btn-outline-primary" href="#"><%= link_to "Добавить", new_unit_path %></span>
+  </p>
+</div>
+<table>
+  <tr>
+    <th width="50%">Название</th>
+    <th width="20%">Обозначение</th>
+    <th>Класс</th>
+    <th>Система</th>
+  </tr>
+  <% @units.order(:unit_system).each do |unit| %>
+    <tr>
+      <td><%= link_to unit.name, unit_path(unit) %></td>
+      <td> <%= unit.symbol %> </td>
+      <td> <%= unit.unit_kind.name %> </td>
+      <td> <%= unit.unit_system.title %> </td>
+    </tr>
+  <% end %>
+</table>

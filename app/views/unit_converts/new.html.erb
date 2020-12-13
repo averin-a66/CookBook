@@ -1,0 +1,9 @@
+<h3>Добавить пересчет единиц</h3>
+<%= form_for( :unit_convert, url: unit_converts_path) do |f| %>
+  <% @f = f %>
+  <%= render 'edit_new' %>
+
+  <p>  <%= f.submit('Запомнить', {:class => 'btn btn-outline-primary'}) %>
+    <%= link_to 'Отмена', unit_converts_path, :class => 'btn btn-outline-primary'  %>
+  </p>
+<% end %>

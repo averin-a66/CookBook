@@ -1,0 +1,11 @@
+<div>
+  <p> Страны      <span class="btn btn-outline-primary" href="#"><%= link_to "Добавить", new_state_path %></span>
+  </p>
+</div>
+<table>
+<% @states.order(:name).each do |state| %>
+  <tr>
+    <td><%= link_to state.name, state_path(state) %></td> <td> <%= state.unit_system.title %> </td>
+  </tr>
+<% end %>
+</table>

@@ -1,0 +1,20 @@
+<div>
+  <p> Преобразование единицы      <span class="btn btn-outline-primary" href="#"><%= link_to "Добавить", new_unit_convert_path %></span>
+  </p>
+</div>
+<table>
+  <tr>
+    <th width="40%">Из</th>
+    <th width="40%">В</th>
+    <th>Коэфициент</th>
+    <th>Класс</th>
+  </tr>
+  <% @unit_converts.each do |unit_convert| %>
+    <tr>
+      <td><%= link_to unit_convert.unit_from.name, edit_unit_convert_path(unit_convert) %></td>
+      <td> <%= unit_convert.unit_to.name %> </td>
+      <td> <%= unit_convert.ratio %> </td>
+      <td> <%= unit_convert.unit_from.unit_kind.name %> </td>
+    </tr>
+  <% end %>
+</table>

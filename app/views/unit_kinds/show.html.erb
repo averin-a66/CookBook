@@ -1,0 +1,9 @@
+<h4>Класс единиц</h4>
+<h5><%= @unit_kind.name %></h5>
+<p><%= @unit_kind.is_can_convert %></p>
+<br>
+<p>
+  <%= link_to 'Редактировать', edit_unit_kind_path(@unit_kind), :class=>'btn btn-warning' %>
+  <%= link_to 'Удалить', unit_kind_path(@unit_kind), method: :delete, data: {confirm: "Удалить?"}, :class=>'btn btn-danger' %>
+  <%= link_to 'Отмена', unit_kinds_path, :class => 'btn btn-outline-primary'  %>
+</p>

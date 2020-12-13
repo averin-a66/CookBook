@@ -1,0 +1,8 @@
+<div>
+  <h3> Рецепты </h3>
+  <span class="btn btn-outline-primary" href="#"><%= link_to "Добавить", new_recipe_path %></span>
+</div>
+<% @recipes.each do |recipe| %>
+  <span href="#"><%= link_to recipe.name, recipe_path(recipe) %></span>
+  <p><%= recipe.body %></p>
+<% end %>

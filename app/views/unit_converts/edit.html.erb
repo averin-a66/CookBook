@@ -1,0 +1,12 @@
+<h3>Изменить единицу</h3>
+<%= form_for( :unit_convert, url: unit_convert_path(@unit_convert), method: :patch) do |f| %>
+  <% @f=f %>
+  <%= render 'edit_new' %>
+  <%if current_user != nil %>
+    <%= f.number_field :user, :value=>current_user.id %>
+  <%end%>
+  <p>
+    <%= f.submit('Запомнить', {:class => 'btn btn-warning'}) %>
+    <%= link_to 'Отмена', unit_converts_path, :class => 'btn btn-outline-primary'  %>
+  </p>
+<% end %>

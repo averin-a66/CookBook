@@ -1,0 +1,23 @@
+<h3>Изменить рецепт</h3>
+<%= form_for( :recipe, url: recipe_path(@recipe), method: :patch) do |f| %>
+  <% @f=f %>
+
+  <%= render 'edit_new' %>
+  <p>
+    <%= f.submit('Запомнить', {:class => 'btn btn-warning'}) %>
+    <%= link_to 'Отмена', recipes_path, :class => 'btn btn-outline-primary'  %>
+  </p>
+<% end %>
+  <%= form_with model: [ @recipe, @recipe.ingredients.build ] do |form| %>
+    <%= form.hidden_field :user_id, :value=>current_user.id %>
+    <p>
+      <%= form.label :name %>
+      <%= form.text_field :name %>
+      <%= form.label :quantity %>
+      <%= form.text_field :quantity %>
+      <%= form.collection_select(:unit_id, Unit.all, :id, :name, prompt: false) %>
+    </p>
+    <p>
+      <%= form.submit("Добавить")%>
+    </p>
+  <% end %>

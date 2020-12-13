@@ -1,0 +1,8 @@
+<h3>Добавить рецепт</h3>
+<%= form_for( :recipe, url: recipes_path) do |f| %>
+  <% @f=f %>
+  <%= render 'edit_new' %>
+  <h2>Add a ingredient:</h2>
+  <%= @f.submit("Добавить ингредиент") %>
+  <p>  <%= f.submit('Запомнить', {:class => 'btn btn-warning'}) %> </p>
+<% end %>

@@ -1,0 +1,12 @@
+<% if @unit_kind.errors.any? %>
+  <% @unit_kind.errors.full_messages.each do |msg| %>
+    <div class="alert alert-danger"><%= msg %></div>
+  <% end %>
+<% end %>
+
+<p>Название<br>
+  <%= @form.text_field(:name, {:class => 'form-control'} )%>
+</p>
+<p>Можно конвертировать
+  <%= @form.check_box(:is_can_convert, {:class => 'form-control'} )%>
+</p>

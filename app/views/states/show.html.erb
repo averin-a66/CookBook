@@ -1,0 +1,9 @@
+<h4>Страна</h4>
+<h5><%= @state.name %></h5>
+<p><%= @state.unit_system.title %></p>
+<br>
+<p>
+  <%= link_to 'Редактировать', edit_state_path(@state), :class=>'btn btn-warning' %>
+  <%= link_to 'Удалить', state_path(@state), method: :delete, data: {confirm: "Удалить?"}, :class=>'btn btn-danger' %>
+  <%= link_to 'Отмена', states_path, :class => 'btn btn-outline-primary'  %>
+</p>

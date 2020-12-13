@@ -3,7 +3,7 @@ class UnitConvert < ApplicationRecord
   belongs_to :unit_to, class_name: 'Unit', :foreign_key => 'unit_to_id', :validate => true
 
   validates :ratio, presence: true
-  validates_with UnitConvertValidator
+  #validates_with UnitConvertValidator
 
   def self.do_convert(unit_from, unit_to, value)
     if unit_from==unit_to
