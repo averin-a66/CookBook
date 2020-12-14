@@ -10,9 +10,13 @@
 <h2>Ingredients</h2>
 <% @recipe.ingredients.each do |i| %>
   <p>
+    <%
+      system_to_id = State.find( current_user.state_id).unit_system.id
+      value, unit_name, cvts  = UnitConvert.do_convert i.unit, system_to_id, i.quantity
+    %>
     <%= i.name %>
-     <%= i.quantity %>
-    <%= i.unit.name %>
+    <%= number_with_precision(value, :precision => 1) %>
+    <%= unit_name %>
   </p>
 <% end %>
 <h2>Comments</h2>
@@ -38,3 +42,5 @@
     <%= form.submit %>
   </p>
 <% end %>
+
+"Add all files"
