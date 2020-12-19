@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="55460402-0044-4999-aa64-d0be7476f249" name="Default Changelist" comment="">
+    <list default="true" id="55460402-0044-4999-aa64-d0be7476f249" name="Default Changelist" comment="Add convertion function">
+      <change beforePath="$PROJECT_DIR$/.idea/cookbook.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cookbook.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/unit_convert.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/unit_convert.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/recipes/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/recipes/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/development.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db/development.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log/development.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/development.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/1H/1HyneLliGLAocm4KVeWzj5tKGWdomYfz7rWloxQlXRc.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/1H/1HyneLliGLAocm4KVeWzj5tKGWdomYfz7rWloxQlXRc.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/8J/8JOedZF9m0P656fHle8DWmmJffxhiciEo-B9Ta6NyG8.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v4.0.0/8J/8JOedZF9m0P656fHle8DWmmJffxhiciEo-B9Ta6NyG8.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-load-path-cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-load-path-cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/pids/server.pid" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/pids/server.pid" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,6 +91,12 @@
       <command value="rails generate devise:views User" />
       <command value="rails g migration AddNamePhoneWorkgroupToUsers" />
       <command value="rails generate devise:controllers users" />
+      <command value="rails g active_admin:install" />
+      <command value="rails g migration AddAdminToAdminUsers" />
+      <command value="rails g active_admin:resource unit_system create  app/admin/unit_systems.rb" />
+      <command value="rails g active_admin:resource unit create  app/admin/units.rb" />
+      <command value="rails g active_admin:resource state create  app/admin/states.rb" />
+      <command value="rails g active_admin:resource recipe create  app/admin/recipes.rb" />
     </option>
   </component>
   <component name="RunManager" selected="Rake.db:migrate">
@@ -229,8 +243,23 @@
       <workItem from="1606851139439" duration="77346000" />
       <workItem from="1607457063905" duration="264000" />
       <workItem from="1607544797549" duration="4956000" />
-      <workItem from="1607761376748" duration="45889000" />
+      <workItem from="1607761376748" duration="57913000" />
     </task>
+    <task id="LOCAL-00001" summary="Add convertion function">
+      <created>1607951674722</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1607951674723</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add convertion function">
+      <created>1607951798323</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1607951798323</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,9 +276,13 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add convertion function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add convertion function" />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/cookbook@ingredient.rcov" NAME="ingredient Coverage Results" MODIFIED="1607795108368" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/models" MODULE_NAME="cookbook" />
     <SUITE FILE_PATH="coverage/cookbook@Development__cookbook.rcov" NAME="Development: cookbook Coverage Results" MODIFIED="1606851451773" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="cookbook" />
-    <SUITE FILE_PATH="coverage/cookbook@db_migrate.rcov" NAME="db:migrate Coverage Results" MODIFIED="1607804775042" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="cookbook" />
+    <SUITE FILE_PATH="coverage/cookbook@db_migrate.rcov" NAME="db:migrate Coverage Results" MODIFIED="1608317112798" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="cookbook" />
   </component>
 </project>
