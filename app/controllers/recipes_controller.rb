@@ -1,6 +1,8 @@
 class RecipesController < ApplicationController
+  require 'tools/YTrans'
   def index
     @recipes = Recipe.all
+    @traslate_text = YTrans::translate_text 'run', 'en', 'ru'
   end
 
   def new
