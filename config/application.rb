@@ -6,6 +6,9 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+#config.autoload_paths << "{Rails.root}/app/lib/tools"
+config.autoload_paths << Rails.root.join('lib/tools')
+
 module Cookbook
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
